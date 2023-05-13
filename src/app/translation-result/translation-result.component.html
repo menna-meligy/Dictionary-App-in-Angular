@@ -1,0 +1,25 @@
+<div class="translation-result">
+    <h2>Translation Result</h2>
+  
+    <div *ngIf="translation">
+      <p><strong>Translated Word:</strong> {{ translation.word }}</p>
+      <p><strong>Source Language:</strong> {{ translation.sourceLang }}</p>
+      <p><strong>Target Language:</strong> {{ translation.targetLang }}</p>
+  
+      <div *ngIf="translation.synonyms">
+        <h3>Synonyms</h3>
+        <app-synonyms-component [synonyms]="translation.synonyms"></app-synonyms-component>
+      </div>
+  
+      <div *ngIf="translation.antonyms">
+        <h3>Antonyms</h3>
+       <!-- <app-synonyms-component [antonyms]="translation.ayntonyms"></app-synonyms-component> -->
+      </div>
+  
+      <div *ngIf="translation.samplePhrases">
+        <h3>Sample Phrases</h3>
+        <!-- <app-sample-phrases [samplePhrases]="translation.samplePhrases"></app-sample-phrases> -->
+      </div>
+    </div>
+  </div>
+  
